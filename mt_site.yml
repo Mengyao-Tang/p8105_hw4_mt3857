@@ -1,0 +1,17 @@
+name: "Mengyao Tang's Personal Website"
+output_dir: "."
+navbar:
+  title: "Home"
+  left:
+    - text: "Landing Page"
+      href: index.html
+    - text: "Resume"
+      href: resume.html
+  right:
+    - icon: fa-github
+      href: https://github.com/Mengyao-Tang
+    - icon: fa-envelope
+      href: "mailto:mt3857@cumc.columbia.edu"
+output:
+  html_document:
+    theme: cerulean

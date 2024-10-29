@@ -1,0 +1,16 @@
+---
+title: "Academic and Professional Experience"
+author: "Mengyao Tang"
+date: "2024-10-29"
+output: html_document
+---
+# Education
+- **Columbia University Mailman School of Public Health** - Master of Science in Epidemiology (in progress)
+
+# Research Experience
+- **Project**: Examining the Causal Relationship between Vitamin D and Sarcopenia
+  - Responsibilities included data cleaning, sample size calculation, and conducting causal association analysis.
+
+# Publications
+- Meng H, Wei JH, Yu PZ, Ren JX, Tang MY, et al. **Insights into Advanced Neurological Dysfunction Mechanisms Following DBS Surgery in Parkinson's Patients**. *Curr Issues Mol Biol.* 2023.
+
