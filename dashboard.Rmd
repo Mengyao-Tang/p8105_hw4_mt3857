@@ -1,0 +1,70 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+
+library(flexdashboard)
+library(plotly)
+library(plotly)
+library(dplyr)
+# Load the dataset 
+nynoaadat <- read.csv("/Users/wan/Downloads/nynoaadat.csv")
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+
+nynoaadat <- nynoaadat %>%
+  mutate(temperature = (tmax + tmin) / 2)
+
+# Scatter Plot of Average Temperature and Precipitation
+plot_ly(data = nynoaadat, x = ~temperature, y = ~prcp, type = 'scatter', mode = 'markers') %>%
+  layout(title = "Temperature vs. Precipitation",
+         xaxis = list(title = "Average Temperature"),
+         yaxis = list(title = "Precipitation"))
+
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+# Line Plot of Maximum Temperature Over Time
+plot_ly(data = nynoaadat, x = ~date, y = ~tmax, type = 'scatter', mode = 'lines') %>%
+  layout(title = "Maximum Temperature Over Time",
+         xaxis = list(title = "Date"),
+         yaxis = list(title = "Maximum Temperature"))
+
+```
+
+### Chart C
+
+```{r}
+# Convert date to month
+nynoaadat <- nynoaadat %>%
+  mutate(month = format(as.Date(date), "%m"))
+
+# Summarize precipitation by month
+monthly_precip <- nynoaadat %>%
+  group_by(month) %>%
+  summarise(total_precipitation = sum(prcp, na.rm = TRUE))
+
+# Bar Plot of Total Precipitation by Month
+plot_ly(data = monthly_precip, x = ~month, y = ~total_precipitation, type = 'bar') %>%
+  layout(title = "Total Precipitation by Month",
+         xaxis = list(title = "Month"),
+         yaxis = list(title = "Total Precipitation"))
+
+```
+
