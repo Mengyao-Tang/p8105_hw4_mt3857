@@ -6,6 +6,17 @@ output: html_document
 ---
 # Welcome to My Personal Website
 
-This is my personal website showcasing my academic background and research projects. I am currently studying at Columbia University Mailman School of Public Health, with a focus on epidemiology and biostatistics.
+This is my personal website showcasing my academic background and research projects. I am currently studying at Columbia University Mailman School of Public Health, with a focus on epidemiology and biostatistics
+
+# Academic and Professional Experience
+# Education
+- **Columbia University Mailman School of Public Health** - Master of Science in Epidemiology (in progress)
+
+# Research Experience
+- **Project**: Examining the Causal Relationship between Vitamin D and Sarcopenia
+  - Responsibilities included data cleaning, sample size calculation, and conducting causal association analysis.
+
+# Publications
+- Meng H, Wei JH, Yu PZ, Ren JX, Tang MY, et al. **Insights into Advanced Neurological Dysfunction Mechanisms Following DBS Surgery in Parkinson's Patients**. *Curr Issues Mol Biol.* 
 
 
